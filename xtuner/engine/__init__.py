@@ -2,9 +2,9 @@
 from ._strategy import DeepSpeedStrategy
 from .hooks import (DatasetInfoHook, EvaluateChatHook, ThroughputHook,
                     VarlenAttnArgsToMessageHubHook)
-from .runner import TrainLoop
+from .runner import TrainLoop, LLaSTTestLoop
 
 __all__ = [
     'EvaluateChatHook', 'DatasetInfoHook', 'ThroughputHook',
-    'VarlenAttnArgsToMessageHubHook', 'DeepSpeedStrategy', 'TrainLoop'
+    'VarlenAttnArgsToMessageHubHook', 'DeepSpeedStrategy', 'TrainLoop', 'LLaSTTestLoop'
 ]

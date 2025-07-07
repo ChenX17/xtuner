@@ -96,6 +96,8 @@ def main():
         runner = RUNNERS.build(cfg)
 
     state_dict = guess_load_checkpoint(args.checkpoint)
+    if "module" in state_dict.keys():
+        state_dict = state_dict["module"]
     runner.model.load_state_dict(state_dict, strict=False)
     runner.logger.info(f'Load checkpoint from {args.checkpoint}')
 
